@@ -6,11 +6,15 @@ body {
     width: 100vw;
   }
 
-  h1, h2, h4 {
+  .primary {
+    color: #f04d23;
+  }
+
+  h1, h2, h4, h5 {
     font-family: 'Radley', serif;
   }
 
-  p, a, h3 {
+  p, a, h3, figcaption {
     font-family: 'Space Mono', monospace;
   }
 
@@ -27,7 +31,7 @@ body {
   }
 
   h2 {
-      font-size: 7.14em;
+      font-size: 12.14em;
   }
 
   h3 {
@@ -38,7 +42,12 @@ body {
       font-size: 4.2em;
   }
 
-  p {
+  h5 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+  }
+
+  p, figcaption {
       font-size: 1.5em;
   }
 
@@ -57,6 +66,10 @@ body {
 	background-color: #d3d3d3;
   }
 
+  .contact-para {
+      font-size: 2em;
+  }
+
 
 
   .section-link {
@@ -65,12 +78,13 @@ body {
       text-decoration: none;
       grid-column: col-start 1 / span 4;
       color: #f04d23;
+      margin-top: 10px;
   }
 
   .section-link:hover {
       text-decoration: underline;
   }
-  
+
   .container {
     width: 100%;
     padding-right: 15px;
@@ -169,12 +183,16 @@ nav ul li {
       grid-template-rows: repeat(12, [row-start] 1fr);
   }
 
-  .img-author {
+  .fig-author {
       grid-column: col-start 8 / span 5;
       grid-row: row-start 1 / span 6;
       width: 100%;
       margin-top: 150px;
       z-index: 1;
+  }
+
+  .pic-author {
+      height: 100%;
   }
 
   .cross {
@@ -198,3 +216,117 @@ nav ul li {
       padding-left: 0;
   }
 
+
+ /*--------- projects ----------*/
+ 
+ 
+  .projects-grid-container {
+      display: grid;
+      grid-column-gap: 30px;
+      grid-template-columns: repeat(12, [col-start] 1fr);
+      width: 100%;
+    }
+
+  .box-vintage-house {
+      grid-column: col-start 1 / span 5;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+  }
+
+  .img-vintage-house {
+      width: 100%
+  }
+
+  .box-colors-of-interior {
+      grid-column: col-start 6 / span 4;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+  }
+
+  .img-colors-of-interior {
+      width: 100%;
+  }
+
+  .box-additional-info {
+      grid-column: col-start 10 / span 3;
+      width: 100%;
+  }
+
+  /*--------- about-me ------------*/
+
+  section.about-me {
+      height: 50vh;
+  }
+
+  .about-me-container {
+    display: grid;
+    grid-column-gap: 30px;
+    grid-template-columns: repeat(4, [col-start] 1fr);
+    width: 100%;
+  }
+
+.insta1 {
+    grid-column: col-start 1 / span 1;
+    width: 100%;
+}
+
+.insta2 {
+    grid-column: col-start 2 / span 1;
+    width: 100%;
+}
+
+.insta3 {
+    grid-column: col-start 3 / span 1;
+    width: 100%;
+}
+
+.insta4 {
+    grid-column: col-start 4 / span 1;
+    width: 100%;
+}
+
+.insta-link {
+    grid-column: col-start 1 / span 1;
+}
+
+/*------------- contact --------------------*/
+
+section.contact {
+    height: 50vh;
+}
+
+.contact-container {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+.contact-heading {
+    z-index: 1;
+}
+
+.contact-line {
+    width: 80%;
+    transform: translateY(-140px);
+    z-index: 0;
+}
+
+/*------------- footer --------------------*/
+
+footer {
+    background-color: #eee;
+    height: 80px;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-para {
+    text-align: center;
+}
